@@ -3,17 +3,17 @@ using namespace std;
 
 // NOTE - Binary search works only on sorted array
 
-int binarySearch(int arr[], int left, int right, int x) {
+int binarySearch(int arr[], int left, int right, int key) {
 
 	while (left <= right)
 	{
 		int mid = left + (right - left) / 2; // (left + right)/2 would do the same
 
-		if (arr[mid] == x)
+		if (arr[mid] == key)
 		{
 			return mid;
 		}
-		else if (arr[mid] < x) { // right half
+		else if (arr[mid] < key) { // right half
 			left = mid + 1;
 		}
 		else { // left half
