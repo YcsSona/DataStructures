@@ -103,9 +103,17 @@ public:
 		}
 		else
 		{
-			n->next = head;
-			head = n;
-			cout << "Node prepended" << endl;
+			if (head == NULL)
+			{
+				head = n;
+				cout << "Node prepended as head node" << endl;
+			}
+			else
+			{
+				n->next = head;
+				head = n;
+				cout << "Node prepended" << endl;
+			}
 		}
 	}
 
